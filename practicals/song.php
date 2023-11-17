@@ -2,6 +2,8 @@
 /**
  * Class representing a Song with basic properties.
  */
+namespace Practicals;
+
 class Song {
     // Properties
     private $title;
