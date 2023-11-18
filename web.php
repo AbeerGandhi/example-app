@@ -8,7 +8,7 @@ use Tests\TestCase;
 
 class SongsTest extends TestCase
 {
-  /**
+    /**
      * A basic feature test songs.
      */
     public function testSongsOk(): void
@@ -17,6 +17,4 @@ class SongsTest extends TestCase
 
         $response->assertStatus(200);
     }
-
-  
 }

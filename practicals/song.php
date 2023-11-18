@@ -2,6 +2,8 @@
 /**
  * Class representing a Song with basic properties.
  */
+
+use Practicals\Song;
 namespace Practicals;
 
 class Song {
