@@ -101,6 +101,8 @@ class Song {
     }
 }
 
+protected $fillable=['title', 'artist'];
+
 // Example usage:
 $song = new Song("Sample Song", "Sample Artist", "Sample Album", 180);
 echo "Title: " . $song->getTitle() . PHP_EOL;
