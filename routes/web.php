@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/songs', function () {
-    return "Songs";
-});
 
 Route::get('/songs', function () {
     return view('songs');
@@ -28,7 +25,7 @@ Route::get('/songs', function () {
     $song->setTitle('With You');
     return view('songs', [ 'song' => $song ]);
 });
-Route::get('/songs', function () {
+/*Route::get('/songs', function () {
   $song1 = new Song();
   $song1->setTitle("Stan");
   $song1->setArtist("Eminem");
@@ -43,7 +40,7 @@ Route::get('/songs', function () {
 
   return view('songs', [ 'songs' => [ $song1, $song2, $song3 ] ]); 
 });
-
+ */
  Route::get('/veggies/baigan', function () {
     return 'Baigan';
 });
@@ -51,3 +48,24 @@ Route::get('/songs', function () {
 Route::get('/veggies/{veggieName}', function (string $veggiename) {
         return $veggiename;
 });
+
+use App\Models\Song;
+
+/*Route::get('/songs', function () {
+    return view('songs');
+});
+
+Route::get('/songs', function () {
+    $song = new Song();
+    $song->setTitle('With You');
+    return view('songs', [ 'song' => $song ]);
+});
+ */
+Route::get('/songs_static', function () {
+    return view('songs_static');
+});
+
+Route::get('/songs', function () {
+    return view('songs', [ 'songs' => Song::all() ] );
+});
+
