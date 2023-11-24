@@ -1,113 +1,86 @@
 <?php
-/**
- * Class representing a Song with basic properties.
- */
+ namespace Practicals;
 
-use Practicals\Song;
-namespace Practicals;
-
-class Song {
-    // Properties
+class Song{
     private $title;
     private $artist;
-    private $album;
-    private $duration;
+    private $genre;
+    private $tempo;
 
     /**
-     * Song constructor.
-     *
-     * @param string $title    The title of the song.
-     * @param string $artist   The artist of the song.
-     * @param string $album    The album of the song.
-     * @param int    $duration The duration of the song in seconds.
-     */
-    public function __construct($title, $artist, $album, $duration) {
-        $this->title = $title;
-        $this->artist = $artist;
-        $this->album = $album;
-        $this->duration = $duration;
-    }
-
-    /**
-     * Get the title of the song.
-     *
-     * @return string The title of the song.
-     */
-    public function getTitle() {
-        return $this->title;
-    }
-
-    /**
-     * Set the title of the song.
-     *
-     * @param string $title The title of the song.
+     * Setter function for setting the title of the song
+     * @param string $title The title of the song
      */
     public function setTitle($title) {
         $this->title = $title;
     }
 
     /**
-     * Get the artist of the song.
-     *
-     * @return string The artist of the song.
+     * Getter function for retrieving the title of the song
+     * @return string The title of the song
      */
-    public function getArtist() {
-        return $this->artist;
+    public function getTitle() {
+        return $this->title;
     }
 
     /**
-     * Set the artist of the song.
-     *
-     * @param string $artist The artist of the song.
+     * Setter function for setting the artist of the song
+     * @param string $artist The artist of the song
      */
     public function setArtist($artist) {
         $this->artist = $artist;
     }
 
     /**
-     * Get the album of the song.
-     *
-     * @return string The album of the song.
+     * Getter function for retrieving the artist of the song
+     * @return string The artist of the song
      */
-    public function getAlbum() {
-        return $this->album;
+    public function getArtist() {
+        return $this->artist;
     }
 
     /**
-     * Set the album of the song.
-     *
-     * @param string $album The album of the song.
+     * Setter function for setting the genre of the song
+     * @param string $genre The genre of the song
      */
-    public function setAlbum($album) {
-        $this->album = $album;
+    public function setGenre($genre) {
+        $this->genre = $genre;
     }
 
     /**
-     * Get the duration of the song.
-     *
-     * @return int The duration of the song in seconds.
+     * Getter function for retrieving the genre of the song
+     * @return string The genre of the song
      */
-    public function getDuration() {
-        return $this->duration;
+    public function getGenre() {
+        return $this->genre;
     }
 
     /**
-     * Set the duration of the song.
-     *
-     * @param int $duration The duration of the song in seconds.
+     * Setter function for setting the tempo of the song
+     * @param string $tempo The tempo of the song
      */
-    public function setDuration($duration) {
-        $this->duration = $duration;
+    public function setTempo($tempo) {
+        $this->tempo = $tempo;
+    }
+
+    /**
+     * Getter function for retrieving the tempo of the song
+     * @return string The tempo of the song
+     */
+    public function getTempo() {
+        return $this->tempo;
     }
 }
 
-protected $fillable=['title', 'artist'];
-
 // Example usage:
-$song = new Song("Sample Song", "Sample Artist", "Sample Album", 180);
-echo "Title: " . $song->getTitle() . PHP_EOL;
-echo "Artist: " . $song->getArtist() . PHP_EOL;
-echo "Album: " . $song->getAlbum() . PHP_EOL;
-echo "Duration: " . $song->getDuration() . " seconds" . PHP_EOL;
-?>
+$song = new Song();
+$song->setTitle("Bohemian Rhapsody");
+$song->setArtist("Queen");
+$song->setGenre("Rock");
+$song->setTempo("70 BPM");
 
+echo "Title: " . $song->getTitle() . "\n";
+echo "Artist: " . $song->getArtist() . "\n";
+echo "Genre: " . $song->getGenre() . "\n";
+echo "Tempo: " . $song->getTempo() . "\n";
+?>
