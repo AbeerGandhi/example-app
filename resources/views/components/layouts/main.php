@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Spotify Clone Project</title>
+  <title>{{ $title ?? "Cool Web App" }}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
    <link href="{{ asset('css/layouts/main.css') }}" rel="stylesheet" />
