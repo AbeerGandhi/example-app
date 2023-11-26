@@ -717,7 +717,7 @@
     </div>
   </body>
 </html>
-
-
-
+<div>
+    <!-- Smile, breathe, and go slowly. - Thich Nhat Hanh -->
+</div>
 
